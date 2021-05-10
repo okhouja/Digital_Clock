@@ -18,9 +18,18 @@ function clock() {
   m = m < 10 ? "0" + m : m;
   s = s < 10 ? "0" + s : s;
 
-  let time = h + ":" + m + ":" + s + " " + meridian;
-  document.getElementById("MyClockDisplay").innerText = time;
-  document.getElementById("MyClockDisplay").textContent = time;
+  let hour = h;
+  let min = m;
+  let sec = s;
+  let mer = meridian;
+  document.getElementById("hourClockDisplay").innerText = hour;
+  document.getElementById("hourClockDisplay").textContent = hour;
+  document.getElementById("minClockDisplay").innerText = min;
+  document.getElementById("minClockDisplay").textContent = min;
+  document.getElementById("secClockDisplay").innerText = sec;
+  document.getElementById("secClockDisplay").textContent = sec;
+  document.getElementById("merClockDisplay").innerText = mer;
+  document.getElementById("merClockDisplay").textContent = mer;
 
   setTimeout(clock, 1000);
 }
@@ -29,7 +38,10 @@ clock();
 
 // stop wacth design
 
-const timer = document.getElementById("stopwatch");
+const timerHr = document.getElementById("hr");
+const timerMin = document.getElementById("min");
+const timerSec = document.getElementById("sec");
+const timerMilSec = document.getElementById("milSec");
 
 let hr = 0;
 let min = 0;
@@ -41,27 +53,12 @@ let stoptime = true;
 function startTimer() {
   if (stoptime == true) {
     stoptime = false;
-    timerMilliSec();
     timerCycle();
   }
 }
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
-  }
-}
-function timerMilliSec() {
-  if (stoptime == false) {
-    milSec = parseInt(milSec);
-    milSec = milSec + 1;
-    if (milSec == 99) {
-      sec = sec + 1;
-      milSec = 0;
-    }
-    if (milSec < 10 || milSec == 0) {
-      milSec = "0" + milSec;
-    }
-    setTimeout("timerMilliSec()", 100);
   }
 }
 
@@ -71,8 +68,11 @@ function timerCycle() {
     sec = parseInt(sec);
     min = parseInt(min);
     hr = parseInt(hr);
-    sec = sec + 1;
-
+    milSec = milSec + 1;
+    if (milSec == 99) {
+      sec = sec + 1;
+      milSec = 0;
+    }
     if (sec == 60) {
       min = min + 1;
       sec = 0;
@@ -83,7 +83,7 @@ function timerCycle() {
       sec = 0;
       milSec = 0;
     }
-    if (milSec < 10 || sec == 0) {
+    if (milSec < 10) {
       milSec = "0" + milSec;
     }
     if (sec < 10 || sec == 0) {
@@ -96,9 +96,12 @@ function timerCycle() {
       hr = "0" + hr;
     }
 
-    timer.innerHTML = hr + ":" + min + ":" + sec + ":" + milSec;
+    timerHr.innerHTML = hr;
+    timerMin.innerHTML = min;
+    timerSec.innerHTML = sec;
+    timerMilSec.innerHTML = milSec;
 
-    setTimeout("timerCycle()", 1000);
+    setTimeout("timerCycle()", 10);
   }
 }
 
