@@ -14,7 +14,6 @@ body {
   width: 100vw;
   background-color: black;
   color: cornflowerblue;
-  border: 2px black dotted;
 }
 .clock {
   display: flex;
@@ -24,8 +23,6 @@ body {
   overflow-wrap: none;
   flex-wrap: nowrap;
   text-align: center;
-  // width: 50%;
-  // height: 60%;
   font-size: 450%;
   text-shadow: 0px 0px 10px lightskyblue;
 }
@@ -38,15 +35,9 @@ h2 {
   padding-bottom: 1em;
   font-size: 2rem;
   color: aqua;
-  // background-color: lightgreen;
-  // width: 15rem;
 }
 .wrapper {
   margin: auto;
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
-  // width: 2rem;
 }
 
 .stop-watch-div {
@@ -61,7 +52,6 @@ h2 {
   align-items: center;
   width: 20rem;
   height: 4rem;
-  // border: 2px red dotted;
   list-style: none;
   font-size: 350%;
   text-shadow: 0px 0px 10px lightskyblue;
