@@ -106,7 +106,10 @@ function timerCycle() {
 }
 
 function resetTimer() {
-  timer.innerHTML = "00:00:00:00";
+  timerHr.innerHTML = "00";
+  timerMin.innerHTML = "00";
+  timerSec.innerHTML = "00";
+  timerMilSec.innerHTML = "00";
   stoptime = true;
   hr = 0;
   sec = 0;
