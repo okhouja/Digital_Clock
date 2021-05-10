@@ -1,0 +1,8 @@
+//Font Imports
+//@include font-face("font name", "../fonts/font-dir-name", 300, $file-formats: ttf);
+
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Spartan&display=swap");
+body {
+  font-family: "Comic Neue", cursive;
+  font-family: "Spartan", sans-serif;
+}

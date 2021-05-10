@@ -1,0 +1,28 @@
+//Variables
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 100vw;
+  background-color: black;
+  color: cornflowerblue;
+  border: 2px black dotted;
+}
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  font-size: 10rem;
+}
+// sizes
+
+// others
