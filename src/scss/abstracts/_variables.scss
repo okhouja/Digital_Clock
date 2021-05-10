@@ -29,3 +29,16 @@ body {
   font-size: 450%;
   text-shadow: 0px 0px 10px lightskyblue;
 }
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+  font-size: 2rem;
+}
+.wrapper {
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  // width: 2rem;
+}
