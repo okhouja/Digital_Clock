@@ -38,7 +38,10 @@ clock();
 
 // stop wacth design
 
-const timer = document.getElementById("stopwatch");
+const timerHr = document.getElementById("hr");
+const timerMin = document.getElementById("min");
+const timerSec = document.getElementById("sec");
+const timerMilSec = document.getElementById("milSec");
 
 let hr = 0;
 let min = 0;
@@ -93,7 +96,10 @@ function timerCycle() {
       hr = "0" + hr;
     }
 
-    timer.innerHTML = hr + " : " + min + " : " + sec + " : " + milSec;
+    timerHr.innerHTML = hr;
+    timerMin.innerHTML = min;
+    timerSec.innerHTML = sec;
+    timerMilSec.innerHTML = milSec;
 
     setTimeout("timerCycle()", 10);
   }
