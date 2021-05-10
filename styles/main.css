@@ -21,9 +21,12 @@ body {
 .clock {
   display: flex;
   justify-content: center;
+  align-content: center;
   align-items: center;
-  height: 12rem;
-  font-size: 10rem;
+  overflow-wrap: none;
+  flex-wrap: nowrap;
+  text-align: center;
+  font-size: 450%;
   text-shadow: 0px 0px 10px lightskyblue;
 }
 
